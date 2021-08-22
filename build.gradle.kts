@@ -1,9 +1,9 @@
 plugins {
-    kotlin("multiplatform") version "1.5.10"
+    kotlin("multiplatform")
 }
 
 group = "org.chiachat.kchia"
-version = "0.1"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -44,6 +44,7 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+//                implementation("com.squareup.okio:okio:3.0.0-alpha.9")
             }
         }
         val jvmMain by getting
