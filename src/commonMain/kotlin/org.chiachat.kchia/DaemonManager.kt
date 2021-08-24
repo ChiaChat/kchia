@@ -1,4 +1,3 @@
 package org.chiachat.kchia
 
-class DaemonManager {
-}
+class DaemonManager

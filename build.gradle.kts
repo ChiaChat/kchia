@@ -1,8 +1,9 @@
 plugins {
     kotlin("multiplatform")
+    id("maven-publish")
 }
 
-group = "org.chiachat.kchia"
+group = "org.chiachat"
 version = "1.0.0"
 
 repositories {
