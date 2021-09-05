@@ -12,7 +12,6 @@ repositories {
     mavenCentral()
 }
 
-val okioVersion = "3.0.0-alpha.9"
 kotlin {
     jvm {
         compilations.all {
@@ -44,10 +43,14 @@ kotlin {
             }
         }
     }*/
+    val okioVersion = "3.0.0-alpha.9"
+    val ktorVersion = "1.6.3"
     sourceSets {
         val commonMain by getting {
             dependencies {
                 api("com.squareup.okio:okio-multiplatform:$okioVersion")
+                implementation("io.ktor:ktor-client-websockets:$ktorVersion")
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
             }
         }
         val commonTest by getting {
@@ -58,6 +61,7 @@ kotlin {
         val jvmMain by getting {
             dependencies {
                 implementation("com.squareup.okio:okio:$okioVersion")
+                implementation("io.ktor:ktor-client-cio:$ktorVersion")
             }
         }
         val jvmTest by getting {
@@ -68,6 +72,7 @@ kotlin {
         val jsMain by getting {
             dependencies {
                 api("com.squareup.okio:okio-nodefilesystem-js:$okioVersion")
+                implementation("io.ktor:ktor-client-js:$ktorVersion")
             }
         }
         /*
